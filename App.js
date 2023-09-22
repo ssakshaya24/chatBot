@@ -8,6 +8,7 @@ import HomeScreen from './App/Pages/HomeScreen';
 import HomeNavigation from './App/Navigation/HomeNavigation.js'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { AppRegistry } from 'react-native';
 
 export default function App() {
   const Stack = createStackNavigator();

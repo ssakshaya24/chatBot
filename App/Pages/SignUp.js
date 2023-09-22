@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import firebase from './firebase.js';
 
 function SignUp({ navigation }) {
   const [email, setEmail] = useState('');
@@ -9,7 +8,7 @@ function SignUp({ navigation }) {
 
   const handleSignUp = async () => {
     try {
-      await firebase.auth().createUserWithEmailAndPassword(email, password);
+      
       navigation.navigate('Login');
     } catch (error) {
       setError(error.message);

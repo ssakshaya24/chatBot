@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import firebase from './firebase.js';
 
 function Login({ navigation }) {
   const [email, setEmail] = useState('');
@@ -9,8 +8,8 @@ function Login({ navigation }) {
 
   const handleLogin = async () => {
     try {
-      await firebase.auth().signInWithEmailAndPassword(email, password);
       // You can navigate to the main app screen after successful login
+      navigation.navigate('SignUp')
     } catch (error) {
       setError(error.message);
     }
